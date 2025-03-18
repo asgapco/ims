@@ -3,6 +3,7 @@ name = "ims"
 version = "0.1.0"
 description = "An inventory management software."
 authors = ["neon-mmd"]
+build = "build/main.rs"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -16,6 +17,11 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
 tauri-build = { version = "2", features = [] }
+lightningcss = {version="1.0.0-alpha.65", default-features=false, features=["grid"]}
+# Disabled until bug fixing update
+# minify-js = { version = "0.6.0", default-features = false }
+# Temporary fork with fix
+minify-js = { git = "https://github.com/RuairidhWilliamson/minify-js", branch = "master", version = "0.6.0", default-features = false }
 
 [dependencies]
 tauri = { version = "2", features = [] }
