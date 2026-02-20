@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # SQL table scripts
-sql-scripts
+# sql-scripts
